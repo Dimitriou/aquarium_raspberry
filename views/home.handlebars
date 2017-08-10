@@ -1,0 +1,95 @@
+<div class="container">
+
+    <h1>{{> page/title}}</h1>
+    <p>Welcome! Keep your fishes alive.</p>
+    <hr><br>
+
+    <button class="btn btn-default" data-toggle="modal" data-target="#myModal">Food Now</button>
+    
+    <button class="btn btn-default" data-toggle="modal" data-target="#myModal1">Food Vacations</button>
+    
+    <button class="btn btn-default" data-toggle="modal" data-target="#myModal2">Food Auto</button>
+ 
+    <form method="post" action="/food_now">
+      <div id="myModal" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+
+              <!-- Modal content-->
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <h4 class="modal-title">Authentication</h4>
+                  </div>
+
+                  <form role="form" action="/login" method="post">
+                      <div class="modal-body">
+                        <div class="form-group">
+                            <label for="pwd">Password:</label>
+                            <input type="password" class="form-control" id="password" name="password" placeholder="Enter password">
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+                          <input type="submit" value="Log In" class="btn btn-default" ></input>
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+    </form>
+
+    <form method="post" action="/food_vacations">
+      <div id="myModal1" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+
+              <!-- Modal content-->
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <h4 class="modal-title">Authentication</h4>
+                  </div>
+
+                  <form role="form" action="/login" method="post">
+                      <div class="modal-body">
+                        <div class="form-group">
+                            <label for="pwd">Password:</label>
+                            <input type="password" class="form-control" id="password" name="password" placeholder="Enter password">
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+                          <input type="submit" value="Log In" class="btn btn-default" ></input>
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+    </form>
+
+
+    <form method="post" action="/food_auto">
+      <div id="myModal2" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+
+              <!-- Modal content-->
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <h4 class="modal-title">Authentication</h4>
+                  </div>
+
+                  <form role="form" action="/login" method="post">
+                      <div class="modal-body">
+                        <div class="form-group">
+                            <label for="pwd">Password:</label>
+                            <input type="password" class="form-control" id="password" name="password" placeholder="Enter password">
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+                          <input type="submit" value="Log In" class="btn btn-default" ></input>
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+    </form>
+    <!-- {{> page/nav}} -->
+</div>
