@@ -27,6 +27,7 @@
     "body-parser": "~1.13.2",
     "express": "*",
     "express-handlebars": "*",
+    "pi-blaster.js": "^0.1.1",
     "pi-pins": "*"
   }
 }

@@ -43,6 +43,7 @@ Note: Briefly, in the tutorial you will:
 7) deploy your first code as mentioned in the [tutorial](https://docs.resin.io/raspberrypi3/nodejs/getting-started/)
 
 After those steps, you can watch the state of your Raspberry Pi 3, access your nodejs-server/web-site via a public url, even access your Raspberry from a web terminal with ssh, which is provided by resin.io. All that from the resin dashboard!
+
 ### Connect the components
 
 1) Connect Servo Motor to GPIO
@@ -50,3 +51,22 @@ After those steps, you can watch the state of your Raspberry Pi 3, access your n
 ![alt text](https://github.com/Temeteron/aquarium_raspberry/blob/master/client/public/img/servo.png?raw=true "Servo to GPIO")
 
 ...
+
+### Install libraries for servo motor via ssh
+After the successfull deployment and the attachment of the components, select your application and then the device from the resin dashboard. Press the tab "Terminal" on your left and "start terminal". This will provide a terminal to your raspberry via ssh.
+
+Go to the terminal and:
+1) Navigate to the pi-blaster folder of your project:
+```bash
+$ cd /usr/src/app/pi-blaster
+```
+2) Install required libraries for [pi-blaster](https://github.com/sarfata/pi-blaster#how-to-use):
+```bash
+./autogen.sh
+./configure && make
+sudo make install
+sudo ./pi-blaster
+```
+Tip: Run the previous commands one by one ("sudo make install" may fail, but this is not a problem)
+
+After that, the pi-blaster deamon is active and can be used via the website with the library [pi-blaster.js](https://github.com/sarfata/pi-blaster.js).

@@ -10,6 +10,43 @@ FROM resin/%%RESIN_MACHINE_NAME%%-node:latest
 #    alsa-utils libasound2-dev && \
 #    apt-get clean && rm -rf /var/lib/apt/lists/*
 
+
+
+################ Pi Blaster #################
+# Install pi-blaster
+#RUN systemctl enable pi-blaster
+
+# Install from local files (second option)
+#RUN cd app/pi-blaster && ./pi-blaster 17 && echo "0=0.1" > /dev/pi-blaster
+#RUN cd ..
+
+# (Third option)
+#RUN cd pi-blaster
+#RUN make install
+#RUN cd ..
+
+# Option of servo repo
+#FROM resin/rpi-node:latest
+
+RUN apt-get update
+RUN apt-get install -y build-essential
+RUN apt-get install autoconf
+RUN apt-get install automake
+
+#RUN apt-get update
+#RUN apt-get install pigpio
+
+#ADD . /app
+
+#RUN cd /app/pi-blaster && make pi-blaster
+
+# CMD ["bash", "/app/start.sh"]
+#############################################
+
+
+
+
+
 # Defines our working directory in container
 WORKDIR /usr/src/app
 
@@ -28,4 +65,6 @@ COPY . ./
 ENV INITSYSTEM on
 
 # server.js will run when container starts up on the device
+# CMD [ "bash", "/app/start.sh", ";", "npm", "start"]
 CMD ["npm", "start"]
+# CMD ["bash", "start.sh"]

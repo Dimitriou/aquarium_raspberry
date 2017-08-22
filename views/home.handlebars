@@ -9,6 +9,8 @@
     <button class="btn btn-default" data-toggle="modal" data-target="#myModal1">Food Vacations</button>
     
     <button class="btn btn-default" data-toggle="modal" data-target="#myModal2">Food Auto</button>
+
+    <button class="btn btn-default" data-toggle="modal" data-target="#myModal3">Stop Everything</button>
  
     <form method="post" action="/food_now">
       <div id="myModal" class="modal fade" role="dialog">
@@ -21,17 +23,16 @@
                       <h4 class="modal-title">Authentication</h4>
                   </div>
 
-                  <form role="form" action="/login" method="post">
-                      <div class="modal-body">
-                        <div class="form-group">
-                            <label for="pwd">Password:</label>
-                            <input type="password" class="form-control" id="password" name="password" placeholder="Enter password">
-                        </div>
-                      </div>
-                      <div class="modal-footer">
-                          <input type="submit" value="Log In" class="btn btn-default" ></input>
-                      </div>
-                  </form>
+                  <div class="modal-body">
+                    <div class="form-group">
+                        <label for="pwd">Password:</label>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Enter password">
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                      <input type="submit" value="Log In" class="btn btn-default" ></input>
+                  </div>
+
               </div>
           </div>
       </div>
@@ -48,17 +49,21 @@
                       <h4 class="modal-title">Authentication</h4>
                   </div>
 
-                  <form role="form" action="/login" method="post">
-                      <div class="modal-body">
-                        <div class="form-group">
-                            <label for="pwd">Password:</label>
-                            <input type="password" class="form-control" id="password" name="password" placeholder="Enter password">
-                        </div>
-                      </div>
-                      <div class="modal-footer">
-                          <input type="submit" value="Log In" class="btn btn-default" ></input>
-                      </div>
-                  </form>
+                  <div class="modal-body">
+                    <div class="form-group">
+                        <label for="pwd">Vacations Time:</label>
+                        <input type="number" class="form-control" id="days" name="days" placeholder="Enter days of vacation">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pwd">Password:</label>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Enter password">
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                      <input type="submit" value="Log In" class="btn btn-default" ></input>
+                  </div>
+
               </div>
           </div>
       </div>
@@ -76,17 +81,42 @@
                       <h4 class="modal-title">Authentication</h4>
                   </div>
 
-                  <form role="form" action="/login" method="post">
-                      <div class="modal-body">
-                        <div class="form-group">
-                            <label for="pwd">Password:</label>
-                            <input type="password" class="form-control" id="password" name="password" placeholder="Enter password">
-                        </div>
-                      </div>
-                      <div class="modal-footer">
-                          <input type="submit" value="Log In" class="btn btn-default" ></input>
-                      </div>
-                  </form>
+                  <div class="modal-body">
+                    <div class="form-group">
+                        <label for="pwd">Password:</label>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Enter password">
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                      <input type="submit" value="Log In" class="btn btn-default" ></input>
+                  </div>
+
+              </div>
+          </div>
+      </div>
+    </form>
+
+    <form method="post" action="/stop_all">
+      <div id="myModal3" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+
+              <!-- Modal content-->
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <h4 class="modal-title">Authentication</h4>
+                  </div>
+
+                  <div class="modal-body">
+                    <div class="form-group">
+                        <label for="pwd">Password:</label>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Enter password">
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                      <input type="submit" value="Log In" class="btn btn-default" ></input>
+                  </div>
+
               </div>
           </div>
       </div>
